@@ -2,7 +2,12 @@ package Utils.UI;
 
 import Utils.ConsoleColors;
 import Utils.Debug;
+import Utils.Utility;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+import java.util.Locale;
 import java.util.Scanner;
 
 public class GUIV2 {
@@ -17,7 +22,25 @@ public class GUIV2 {
         selectionPoints = points;
     }
 
-    public void getInput(){
+    public void getInput(String className, String callMethod, Class<?>[] argTypes, Object[] methArgs){
+        in.nextLine();
+        String input = in.nextLine().toUpperCase();
+        Debug.Log("input reached");
+
+        try {
+            Debug.Log("entered try");
+            if(input.equals("W")){
+                Utility.launchProcess(className, callMethod, argTypes, methArgs);
+                Debug.Log("Button Pressed");
+            }else if(input.equals("A")){
+                Utility.launchProcess(className, callMethod, argTypes, methArgs);
+            }else if(input.equals("S")){
+                Utility.launchProcess(className, callMethod, argTypes, methArgs);
+            }else if(input.equals("D")){
+                Utility.launchProcess(className, callMethod, argTypes, methArgs);
+            }
+        }
+        catch (Exception e){ Debug.Log("Class Not Found");}
 
     }
 

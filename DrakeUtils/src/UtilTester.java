@@ -2,6 +2,7 @@ import Utils.Debug;
 import Utils.Grid;
 import Utils.UI.GUIV2;
 import Utils.UI.GridUI;
+import java.lang.reflect.Method;
 
 public class UtilTester {
     static boolean isRunning = true;
@@ -18,13 +19,20 @@ public class UtilTester {
             {4,7}
     };
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         GUIV2 gui = new GUIV2(menu, selPoints);
 
         while(isRunning) {
             gui.DisplayGUI();
             gui.UpdateGUI();
 
+            Class<?>[] argTypes = {};
+            Object[] arguments = {};
+            gui.getInput("UtilTester", "test", argTypes, arguments);
         }
+    }
+
+    public static void test(){
+        Debug.Log("HI");
     }
 }

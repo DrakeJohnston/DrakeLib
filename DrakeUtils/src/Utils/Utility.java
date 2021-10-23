@@ -1,5 +1,6 @@
 package Utils;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -83,6 +84,28 @@ public class Utility {
     public static void Wait(int time /*milliseconds*/){
         try{Thread.sleep(time);} catch(InterruptedException e){}
         //todo: add somthing if inturrupted
+    }
+
+    public static String getCallerClassName() {
+        StackTraceElement[] stElements = Thread.currentThread().getStackTrace();
+        for (int i=1; i<stElements.length; i++) {
+            StackTraceElement ste = stElements[i];
+            if (!ste.getClassName().equals(Debug.class.getName()) && ste.getClassName().indexOf("java.lang.Thread")!=0) {
+                return ste.getClassName();
+            }
+        }
+        return null;
+    }
+
+    public static Object launchProcess(String className, String methodName, Class<?>[] argsTypes, Object[] methodArgs)
+            throws Exception {
+
+        Class<?> processClass = Class.forName(className); // convert string classname to class
+        Object process = processClass.newInstance(); // invoke empty constructor
+
+        Method aMethod = process.getClass().getMethod(methodName,argsTypes);
+        Object res = aMethod.invoke(process, methodArgs); // pass arg
+        return(res);
     }
 
 }
