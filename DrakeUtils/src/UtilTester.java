@@ -1,8 +1,4 @@
-import Utils.Debug;
-import Utils.Grid;
-import Utils.UI.GUIV2;
-import Utils.UI.GridUI;
-import java.lang.reflect.Method;
+import Utils.UI.GUI;
 
 public class UtilTester {
     static boolean isRunning = true;
@@ -16,23 +12,32 @@ public class UtilTester {
 
     static  int[][] selPoints = {
             {1,7},
-            {4,7}
+            {3,7}
     };
 
+    public static GUI gui = new GUI(menu, selPoints);
+
     public static void main(String[] args){
-        GUIV2 gui = new GUIV2(menu, selPoints);
 
         while(isRunning) {
-            gui.DisplayGUI();
             gui.UpdateGUI();
+            gui.DisplayGUI();
 
-            Class<?>[] argTypes = {};
-            Object[] arguments = {};
+            Class<?>[] argTypes = {String.class};
+            Object[] arguments = {" "};
             gui.getInput("UtilTester", "test", argTypes, arguments);
         }
     }
 
-    public static void test(){
-        Debug.Log("HI");
+    public static void test(String letter){
+        if(letter.equals("W")){
+            gui.setSelector(gui.getSelector() - 1);
+        }else if(letter.equals("S")){
+            gui.setSelector(gui.getSelector() + 1);
+        }else if(letter.equals("")){
+            if(gui.getSelector() == 1){
+                isRunning = false;
+            }
+        }
     }
 }
