@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/UtilTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/UtilTester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/UI/GUIV2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UtilTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UtilTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utils/UI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/UI/GUIV2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/UI/GridUI.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
