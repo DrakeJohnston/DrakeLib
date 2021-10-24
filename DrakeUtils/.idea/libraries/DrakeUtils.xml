@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="DrakeUtils">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/DrakeUtils_jar/DrakeUtils.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
