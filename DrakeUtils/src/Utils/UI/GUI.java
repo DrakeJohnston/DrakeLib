@@ -2,6 +2,7 @@ package Utils.UI;
 
 import Utils.ConsoleColors;
 import Utils.Debug;
+import Utils.Math.Vector2;
 import Utils.Utility;
 
 import java.lang.reflect.InvocationTargetException;
@@ -13,20 +14,20 @@ import java.util.Scanner;
 public class GUI {
     char [][] guiArray;
 
-    int[][] selectionPoints;
+    Vector2[] selectionPoints;
     int selectedOption = 0;
 
     char selector = '@';
     char defaultChar = '0';
-    int[] selectorPos = {1,1};
-    int[] lastPos = {1, 1};
+    Vector2 selectorPos = new Vector2(1,1);
+    Vector2 lastPos = new Vector2(1,1);
 
     boolean freeSelect = false;
     boolean isActive;
     Scanner in = new Scanner(System.in);
 
     //todo: setup a value to set selector
-    public GUI(char[][] g, int[][] points, boolean active, char defChar){
+    public GUI(char[][] g, Vector2[] points, boolean active, char defChar){
         guiArray = g;
         selectionPoints = points;
         defaultChar = defChar;
@@ -46,19 +47,19 @@ public class GUI {
     public boolean IsActive(){ return isActive;}
     public void setActive(boolean val){  isActive = val;}
 
-    public void moveSelector(int x, int y){
+    public void moveSelector(float x, float y){
         //todo: fix so that when characters are at x one they can move left
         if((x < guiArray[0].length && y < guiArray.length) || (x < 0 && y < 0)) {
-            lastPos[0] = selectorPos[0];
-            lastPos[1] = selectorPos[1];
+            lastPos.x = selectorPos.x;
+            lastPos.y = selectorPos.y;
 
-            selectorPos[0] = x;
-            selectorPos[1] = y;
+            selectorPos.x= x;
+            selectorPos.y = y;
         }
     }
 
-    public int[] getSelectorPos(){
-        int[] pos = {selectorPos[0], selectorPos[1]};
+    public Vector2 getSelectorPos(){
+        Vector2 pos = new Vector2(selectorPos.x, selectorPos.y);
         return pos;
     }
 
@@ -92,14 +93,14 @@ public class GUI {
         if(!freeSelect) {
             for (int i = 0; i < selectionPoints.length; i++) {
                 if (i == selectedOption) {
-                    guiArray[selectionPoints[i][0]][selectionPoints[i][1]] = selector;
+                    guiArray[(int)selectionPoints[i].x][(int)selectionPoints[i].y] = selector;
                 } else if (i != selectedOption) {
-                    guiArray[selectionPoints[i][0]][selectionPoints[i][1]] = defaultChar;
+                    guiArray[(int)selectionPoints[i].x][(int)selectionPoints[i].y] = defaultChar;
                 }
             }
         }else{
-            replaceAt(selectorPos[0], selectorPos[1], selector);
-            replaceAt(lastPos[0], lastPos[1], defaultChar);
+            replaceAt(selectorPos.x, selectorPos.y, selector);
+            replaceAt(lastPos.x, lastPos.y, defaultChar);
         }
     }
 
@@ -114,6 +115,11 @@ public class GUI {
     public void replaceAt(int x, int y, char newChar){
         if(x < guiArray.length && y < guiArray[0].length) {
             guiArray[x][y] = newChar;
+        }
+    }
+    public void replaceAt(float x, float y, char newChar){
+        if(x < guiArray.length && y < guiArray[0].length) {
+            guiArray[(int)x][(int)y] = newChar;
         }
     }
 }

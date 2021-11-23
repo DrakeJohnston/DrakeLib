@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../DrakeUtils.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/DrakeUtils_jar/DrakeUtils.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UtilTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UtilTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Math/Vector2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Math/Vector2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/UI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../LibGDX ProjFolder/ShooterGame/build.gradle" />
   </component>
   <component name="RunManager">
     <configuration name="UtilTester" type="Application" factoryName="Application" nameIsGenerated="true">

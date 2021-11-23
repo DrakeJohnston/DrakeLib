@@ -1,8 +1,8 @@
 package Utils.Math;
 
 public class Vector2 {
-    float x;
-    float y;
+    public float x;
+    public float y;
 
     public Vector2 (){
         x = 0.0f;
