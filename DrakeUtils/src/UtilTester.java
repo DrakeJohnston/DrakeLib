@@ -1,3 +1,4 @@
+import Utils.Math.Vector2;
 import Utils.UI.GUI;
 
 public class UtilTester {
@@ -17,9 +18,9 @@ public class UtilTester {
             {'0','0','0','0','0','0','0','0','0','0'}
     };
 
-    static  int[][] mainMenuPoints = {
-            {1,7},
-            {3,7}
+    static  Vector2[] mainMenuPoints = {
+            new Vector2(1,7),
+            new Vector2(3,7)
     };
 
     public static GUI mainMenu = new GUI(menu, mainMenuPoints, true, '0');
@@ -58,19 +59,19 @@ public class UtilTester {
     }
 
     private static void HandleGameInput(String letter) {
-        int[] pos = game.getSelectorPos();
+        Vector2 pos = game.getSelectorPos();
         switch (letter){
             case "W":
-                game.moveSelector(pos[0] - 1, pos[1]);
+                game.moveSelector(pos.x - 1, pos.y);
                 break;
             case "A":
-                game.moveSelector(pos[0], pos[1] - 1);
+                game.moveSelector(pos.x, pos.y - 1);
                 break;
             case "S":
-                game.moveSelector(pos[0] + 1, pos[1]);
+                game.moveSelector(pos.x + 1, pos.y);
                 break;
             case "D":
-                game.moveSelector(pos[0], pos[1] + 1);
+                game.moveSelector(pos.x, pos.y + 1);
                 break;
         }
     }
