@@ -1,5 +1,7 @@
 package Utils;
 
+import Utils.UI.Tile;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Random;
@@ -78,6 +80,26 @@ public class Utility {
             cat += val;
         }
         return cat;
+    }
+
+    public static Tile charToTile(char c){
+        return new Tile(c);
+    }
+    public static Tile[] charToTile(char[] c){
+        Tile[] t = new Tile[c.length];
+        for (int i=0; i < t.length; i++){
+            t[i] = new Tile(c[i]);
+        }
+        return t;
+    }
+    public static Tile[][] charToTile(char[][] c){
+        Tile[][] t = new Tile[c.length][c[0].length];
+        for (int i=0; i < t.length; i++){
+            for (int k=0; k < t[0].length; k++) {
+                t[i][k] = new Tile(c[i][k]);
+            }
+        }
+        return t;
     }
 
     //waits for the amount of time given in milliseconds

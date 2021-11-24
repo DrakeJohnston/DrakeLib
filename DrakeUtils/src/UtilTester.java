@@ -59,7 +59,7 @@ public class UtilTester {
     }
 
     private static void HandleGameInput(String letter) {
-        Vector2 pos = game.getSelectorPos();
+        Vector2 pos = game.getSelector();
         switch (letter){
             case "W":
                 game.moveSelector(pos.x - 1, pos.y);

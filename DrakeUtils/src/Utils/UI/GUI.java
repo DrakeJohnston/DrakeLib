@@ -12,14 +12,13 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class GUI {
-    char [][] guiArray;
+    Tile [][] guiArray;
 
     Vector2[] selectionPoints;
     int selectedOption = 0;
 
-    char selector = '@';
-    char defaultChar = '0';
-    Vector2 selectorPos = new Vector2(1,1);
+    Tile selector = new Tile('@', new Vector2(1,1));
+    Tile defaultChar = new Tile(' ');
     Vector2 lastPos = new Vector2(1,1);
 
     boolean freeSelect = false;
@@ -27,18 +26,31 @@ public class GUI {
     Scanner in = new Scanner(System.in);
 
     //todo: setup a value to set selector
-    public GUI(char[][] g, Vector2[] points, boolean active, char defChar){
+    public GUI(Tile[][] g, Vector2[] points, boolean active, Tile defChar){
         guiArray = g;
         selectionPoints = points;
         defaultChar = defChar;
         isActive = active;
     }
-    public GUI(char[][]g, boolean isActive, char defChar){
+    public GUI(Tile[][]g, boolean isActive, Tile defChar){
         guiArray = g;
         this.isActive = isActive;
         defaultChar = defChar;
         freeSelect = true;
     }
+    public GUI(char[][] g, Vector2[] points, boolean active, char defChar){
+        guiArray = Utility.charToTile(g);
+        selectionPoints = points;
+        defaultChar = Utility.charToTile(defChar);
+        isActive = active;
+    }
+    public GUI(char[][]g, boolean isActive, char defChar){
+        guiArray = Utility.charToTile(g);
+        this.isActive = isActive;
+        defaultChar = Utility.charToTile(defChar);
+        freeSelect = true;
+    }
+
 
     public int getSelector(){return selectedOption;}
 
@@ -50,17 +62,11 @@ public class GUI {
     public void moveSelector(float x, float y){
         //todo: fix so that when characters are at x one they can move left
         if((x < guiArray[0].length && y < guiArray.length) || (x < 0 && y < 0)) {
-            lastPos.x = selectorPos.x;
-            lastPos.y = selectorPos.y;
+            lastPos.x = selector.getGridPos().x;
+            lastPos.y = selector.getGridPos().y;
 
-            selectorPos.x= x;
-            selectorPos.y = y;
+            selector.setGridPos(new Vector2(x, y));
         }
-    }
-
-    public Vector2 getSelectorPos(){
-        Vector2 pos = new Vector2(selectorPos.x, selectorPos.y);
-        return pos;
     }
 
     public void RunGUI(){
@@ -99,27 +105,32 @@ public class GUI {
                 }
             }
         }else{
-            replaceAt(selectorPos.x, selectorPos.y, selector);
+            replaceAt(selector.getGridPos().x, selector.getGridPos().y, selector);
             replaceAt(lastPos.x, lastPos.y, defaultChar);
         }
     }
 
-    public char findCharAt(int x, int y){
+    public Tile findTileAt(int x, int y){
         if(x < guiArray.length && y < guiArray[0].length) {
             return guiArray[x][y];
         }else{
-            return ' ';
+            return null;
         }
     }
 
-    public void replaceAt(int x, int y, char newChar){
+    public void replaceAt(int x, int y, Tile newChar){
         if(x < guiArray.length && y < guiArray[0].length) {
             guiArray[x][y] = newChar;
         }
     }
-    public void replaceAt(float x, float y, char newChar){
+    public void replaceAt(float x, float y, Tile newChar){
         if(x < guiArray.length && y < guiArray[0].length) {
             guiArray[(int)x][(int)y] = newChar;
+        }
+    }
+    public void replaceAt(Vector2 vec, Tile newChar){
+        if(vec.x < guiArray.length && vec.y < guiArray[0].length) {
+            guiArray[(int)vec.x][(int)vec.y] = newChar;
         }
     }
 }
