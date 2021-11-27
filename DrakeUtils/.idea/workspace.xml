@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="Added tile and created new branch" />
+    <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="Added tile and created new branch">
+      <change beforePath="$PROJECT_DIR$/src/Utils/UI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/GUI.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -68,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637701687908</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Checked of new Branch">
+      <created>1638043262647</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638043262647</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,7 +91,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="GUIModifacations" />
                       </list>
                     </value>
                   </entry>
@@ -98,6 +107,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed Gui class to vectors instead of arrays" />
     <MESSAGE value="Added tile and created new branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tile and created new branch" />
+    <MESSAGE value="Checked of new Branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checked of new Branch" />
   </component>
 </project>
