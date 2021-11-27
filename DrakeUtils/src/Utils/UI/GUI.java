@@ -8,25 +8,26 @@ import Utils.Utility;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class GUI {
-    Tile [][] guiArray;
-    boolean isActive = true;
-    Scanner in = new Scanner(System.in);
+    private  Tile [][] guiArray;
+    private boolean isActive = true;
+    private Scanner in = new Scanner(System.in);
+    private String guiName;
 
-    //todo: setup a value to set selector
-    public GUI(Tile[][] g, boolean active){
+    private static ArrayList<GUI> guis = new ArrayList<>();
+
+    public GUI(Tile[][] g, String guiName,boolean active){
         guiArray = g;
+        this.guiName = guiName;
         isActive = active;
     }
-    public GUI(Tile[][]g, boolean isActive, Tile defChar){
-        guiArray = g;
-        this.isActive = isActive;
-    }
-    public GUI(char[][] g, boolean active){
+    public GUI(char[][] g, String guiName, boolean active){
         guiArray = Utility.charToTile(g);
+        this.guiName = guiName;
         isActive = active;
     }
 
@@ -34,10 +35,13 @@ public class GUI {
     public void setActive(boolean val){  isActive = val;}
 
     public void RunGUI(){
-        UpdateGUI();
-        DisplayGUI();
+        if(isActive) {
+            UpdateGUI();
+            DisplayGUI();
+        }
     }
 
+    //gets the next key pressed and passes it to parameter method of class chosen
     public void getInput(String className, String callMethod, Class<?>[] argTypes, Object[] methArgs){
         String input = in.nextLine().toUpperCase();
 
@@ -61,6 +65,10 @@ public class GUI {
 
     public void UpdateGUI(){
 
+    }
+
+    public String getGuiName() {
+        return guiName;
     }
 
     public Tile findTileAt(int x, int y){

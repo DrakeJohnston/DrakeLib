@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="Added tile and created new branch">
+    <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="Cleaned Up gui class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UtilTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UtilTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utils/UI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/UI/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Utility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638043262647</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Cleaned Up gui class">
+      <created>1638043648831</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638043648831</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +119,7 @@
     <MESSAGE value="Changed Gui class to vectors instead of arrays" />
     <MESSAGE value="Added tile and created new branch" />
     <MESSAGE value="Checked of new Branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Checked of new Branch" />
+    <MESSAGE value="Cleaned Up gui class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned Up gui class" />
   </component>
 </project>

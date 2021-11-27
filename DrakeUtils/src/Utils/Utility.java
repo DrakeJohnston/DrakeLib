@@ -83,12 +83,12 @@ public class Utility {
     }
 
     public static Tile charToTile(char c){
-        return new Tile(c);
+        return new Tile(c, Tile.findNextAvailibleID());
     }
     public static Tile[] charToTile(char[] c){
         Tile[] t = new Tile[c.length];
         for (int i=0; i < t.length; i++){
-            t[i] = new Tile(c[i]);
+            t[i] = new Tile(c[i], Tile.findNextAvailibleID());
         }
         return t;
     }
@@ -96,7 +96,7 @@ public class Utility {
         Tile[][] t = new Tile[c.length][c[0].length];
         for (int i=0; i < t.length; i++){
             for (int k=0; k < t[0].length; k++) {
-                t[i][k] = new Tile(c[i][k]);
+                t[i][k] = new Tile(c[i][k], Tile.findNextAvailibleID());
             }
         }
         return t;

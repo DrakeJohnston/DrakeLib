@@ -5,7 +5,7 @@ public class UtilTester {
     static boolean isRunning = true;
     static char[][] menu = {
             {'0','0','0','0','0','0','0','0','0','0'},
-            {'0','0','0','P','l','a','y','0','0','0'},
+            {'0','0','0','P','l','a','y','@','0','0'},
             {'0','0','0','0','0','0','0','0','0','0'},
             {'0','0','0','E','x','i','t','0','0','0'},
             {'0','0','0','0','0','0','0','0','0','0'}
@@ -23,8 +23,8 @@ public class UtilTester {
             new Vector2(3,7)
     };
 
-    public static GUI mainMenu = new GUI(menu, mainMenuPoints, true, '0');
-    public static GUI game = new GUI(gamemenu, false, '0');
+    public static GUI mainMenu = new GUI(menu, "mainMenu", true);
+    public static GUI game = new GUI(gamemenu, "game", true);
 
     public static  GUI[] guis = {
             mainMenu,
@@ -38,58 +38,16 @@ public class UtilTester {
             for (int i=0; i < guis.length; i++){
                 if(guis[i].IsActive() == true){
 
-                    Class<?>[] argTypes = {String.class};
-                    Object[] arguments = {" "};
+                    //Class<?>[] argTypes = {String.class};
+                    //Object[] arguments = {" "};
                     GUI gui = guis[i];
 
                     gui.RunGUI();
-                    gui.getInput("UtilTester", "useInput", argTypes, arguments);
+                    //gui.getInput("UtilTester", "useInput", argTypes, arguments);
                 }
             }
 
         }
     }
 
-    public static void useInput(String letter){
-        if(mainMenu.IsActive()) {
-            HandleMainMenuInput(letter);
-        }else if(game.IsActive()){
-            HandleGameInput(letter);
-        }
-    }
-
-    private static void HandleGameInput(String letter) {
-        Vector2 pos = game.getSelector();
-        switch (letter){
-            case "W":
-                game.moveSelector(pos.x - 1, pos.y);
-                break;
-            case "A":
-                game.moveSelector(pos.x, pos.y - 1);
-                break;
-            case "S":
-                game.moveSelector(pos.x + 1, pos.y);
-                break;
-            case "D":
-                game.moveSelector(pos.x, pos.y + 1);
-                break;
-        }
-    }
-
-    private static void HandleMainMenuInput(String letter) {
-        if (letter.equals("W")) {
-            mainMenu.setSelector(mainMenu.getSelector() - 1);
-        } else if (letter.equals("S")) {
-            mainMenu.setSelector(mainMenu.getSelector() + 1);
-        } else if (letter.equals("")) {
-
-            if (mainMenu.getSelector() == 0) {
-                game.setActive(true);
-                mainMenu.setActive(false);
-            } else if (mainMenu.getSelector() == 1) {
-                isRunning = false;
-            }
-
-        }
-    }
 }
