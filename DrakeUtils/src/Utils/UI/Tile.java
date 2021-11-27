@@ -10,7 +10,7 @@ public class Tile {
         this.glyph = glyph;
     }
     public Tile(char glyph, Vector2 pos){
-        this.gridPos = pos;
+        this.glyph = glyph; this.gridPos = pos;
     }
 
     public Vector2 getGridPos() {
