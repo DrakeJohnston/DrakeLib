@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="Cleaned Up gui class">
+    <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="Added tile functions and improved utillity tile conversiom todo: have a tostring method for tile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UtilTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UtilTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/UI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/UI/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Utility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Utility.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638043648831</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added tile functions and improved utillity tile conversiom todo: have a tostring method for tile">
+      <created>1638046901685</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638046901685</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,6 +124,7 @@
     <MESSAGE value="Added tile and created new branch" />
     <MESSAGE value="Checked of new Branch" />
     <MESSAGE value="Cleaned Up gui class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned Up gui class" />
+    <MESSAGE value="Added tile functions and improved utillity tile conversiom todo: have a tostring method for tile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tile functions and improved utillity tile conversiom todo: have a tostring method for tile" />
   </component>
 </project>
