@@ -1,5 +1,7 @@
 package Utils;
 
+import Utils.Math.Vector2;
+import Utils.UI.GUI;
 import Utils.UI.Tile;
 
 import java.lang.reflect.Method;
@@ -65,7 +67,20 @@ public class Utility {
         return tmp;
     }
 
-    //The following were actually added during the making of the game by us:
+    public static ArrayList<ArrayList<Character>> CharAToAL(char[][] chars){
+        ArrayList<ArrayList<Character>> c = new ArrayList<>();
+
+        for(int i=0; i < chars.length; i++){
+            ArrayList<Character> b = new ArrayList<>();
+            for (int k=0; k < chars[i].length; k++){
+                Character ch = Character.valueOf(chars[i][k]);
+                b.add(ch);
+                //Debug.printLn(ch);
+            }
+            c.add(b);
+        }
+        return c;
+    }
 
     //returns a random array of type string from a string double array
     public static String[] getRandom(String[][] array) {
@@ -82,25 +97,6 @@ public class Utility {
         return cat;
     }
 
-    public static Tile charToTile(char c){
-        return new Tile(c, Tile.findNextAvailibleID());
-    }
-    public static Tile[] charToTile(char[] c){
-        Tile[] t = new Tile[c.length];
-        for (int i=0; i < t.length; i++){
-            t[i] = new Tile(c[i], Tile.findNextAvailibleID());
-        }
-        return t;
-    }
-    public static Tile[][] charToTile(char[][] c){
-        Tile[][] t = new Tile[c.length][c[0].length];
-        for (int i=0; i < t.length; i++){
-            for (int k=0; k < t[0].length; k++) {
-                t[i][k] = new Tile(c[i][k], Tile.findNextAvailibleID());
-            }
-        }
-        return t;
-    }
 
     //waits for the amount of time given in milliseconds
     public static void Wait(int time /*milliseconds*/){

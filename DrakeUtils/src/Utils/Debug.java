@@ -1,5 +1,6 @@
 package Utils;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class Debug {
     static LocalTime curTime = LocalTime.now();
@@ -89,6 +90,15 @@ public class Debug {
             System.out.print("\n");
             for (int y=0; y < array[0].length; y++){
                 System.out.print(array[x][y]);
+            }
+        }
+    }
+    //printing every element of an array of an array (2d char arrays)
+    public static void PrintDoubleArray(ArrayList<ArrayList<Character>> array){
+        for (int x=0; x < array.size(); x++){
+            System.out.print("\n");
+            for (int y=0; y < array.get(x).size(); y++){
+                System.out.print(array.get(x).get(y));
             }
         }
     }

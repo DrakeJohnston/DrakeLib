@@ -1,5 +1,13 @@
+import Utils.Debug;
+import Utils.InputHandler;
 import Utils.Math.Vector2;
+import Utils.UI.Entity;
 import Utils.UI.GUI;
+import Utils.UI.Tile;
+import Utils.Utility;
+import jdk.jshell.execution.Util;
+
+import java.util.ArrayList;
 
 public class UtilTester {
     static boolean isRunning = true;
@@ -11,43 +19,47 @@ public class UtilTester {
             {'0','0','0','0','0','0','0','0','0','0'}
     };
     static char[][] gamemenu = {
+            {'0','1','0','0','0','0','0','0','0','0'},
             {'0','0','0','0','0','0','0','0','0','0'},
-            {'0','0','0','0','0','0','0','0','0','0'},
-            {'0','0','0','0','0','0','0','0','0','0'},
+            {'0','0','0','0','@','0','0','0','0','0'},
             {'0','0','0','0','0','0','0','0','0','0'},
             {'0','0','0','0','0','0','0','0','0','0'}
     };
 
-    static  Vector2[] mainMenuPoints = {
-            new Vector2(1,7),
-            new Vector2(3,7)
-    };
 
-    public static GUI mainMenu = new GUI(menu, "mainMenu", true);
-    public static GUI game = new GUI(gamemenu, "game", true);
+    public static GUI game = new GUI(new Vector2(5, 15), "game", true);
 
-    public static  GUI[] guis = {
-            mainMenu,
-            game
-    };
+
 
     public static void main(String[] args){
 
+        GUI gui = game;
+        Entity cursor = new Entity('@', new Vector2(0,0), game);
+
         while(isRunning) {
 
-            for (int i=0; i < guis.length; i++){
-                if(guis[i].IsActive() == true){
 
-                    //Class<?>[] argTypes = {String.class};
-                    //Object[] arguments = {" "};
-                    GUI gui = guis[i];
+            //Class<?>[] argTypes = {String.class};
+            //Object[] arguments = {" "};
+            //gui.getInput("UtilTester", "useInput", argTypes, arguments);
 
-                    gui.RunGUI();
-                    //gui.getInput("UtilTester", "useInput", argTypes, arguments);
-                }
+            gui.RunGUI();
+            String s = InputHandler.GetKeyPressed();
+            if(s.equals("s") || s.equals("S")){
+                gui.MoveEntity(cursor, new Vector2(cursor.getPos().x + 1, cursor.getPos().y));
+            }
+            if(s.equals("w") || s.equals("W")){
+                gui.MoveEntity(cursor, new Vector2(cursor.getPos().x - 1, cursor.getPos().y));
+            }
+            if(s.equals("a") || s.equals("A")){
+                gui.MoveEntity(cursor, new Vector2(cursor.getPos().x, cursor.getPos().y - 1));
+            }
+            if(s.equals("d") || s.equals("D")){
+                gui.MoveEntity(cursor, new Vector2(cursor.getPos().x, cursor.getPos().y + 1));
             }
 
         }
+
     }
 
 }

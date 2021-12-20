@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="Added tile functions and improved utillity tile conversiom todo: have a tostring method for tile">
+    <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="Current Verson on pc">
+      <change afterPath="$PROJECT_DIR$/src/Utils/InputHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/UI/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/UtilTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/UtilTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/ConsoleColors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/ConsoleColors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Debug.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Debug.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Grid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/UI/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/UI/GUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Utility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Utility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UtilTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UtilTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Debug.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Debug.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Math/Vector2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Math/Vector2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/UI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/UI/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Utility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
     <configuration name="UtilTester" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -106,7 +120,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="GUIModifacations" />
+                        <option value="origin/GUIModifacations" />
                       </list>
                     </value>
                   </entry>
