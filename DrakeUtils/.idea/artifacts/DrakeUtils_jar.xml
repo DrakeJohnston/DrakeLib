@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DrakeUtils:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DrakeUtils_jar</output-path>
+    <root id="archive" name="DrakeUtils.jar">
+      <element id="module-output" name="DrakeUtils" />
+    </root>
+  </artifact>
+</component>

@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="DrakeUtils:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22421018-d99a-423d-bf55-989944d0e971" name="Default Changelist" comment="Current Verson on pc">
-      <change afterPath="$PROJECT_DIR$/src/Utils/InputHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils/UI/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Utils/Entities/EntityGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/DrakeUtils.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/UtilTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/UtilTester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/ConsoleColors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/ConsoleColors.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Debug.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Debug.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Grid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/InputHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/InputHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Math/Vector2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Math/Vector2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/UI/Entity.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/UI/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/UI/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/UI/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/UI/Tile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Utility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DrakeUtils/Utils/Utility.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UtilTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UtilTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Debug.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Debug.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Math/Vector2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Math/Vector2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/ConsoleColors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Debug.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/InputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/InputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Math/Vector2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/UI/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Entities/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utils/UI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utils/UI/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UI/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Utility.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +60,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/CULMINATINGGGGGG" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="build.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Utils.Entities" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="UtilTester" type="Application" factoryName="Application" nameIsGenerated="true">
